@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Naver Login Callback</title>
+</head>
+<body>
+  <h1>네이버 로그인 처리 중…</h1>
+  <p>정상적으로 네이버 로그인 호출이 완료되었습니다.</p>
+
+  <p>code: <span id="code"></span></p>
+  <p>state: <span id="state"></span></p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('code').innerText = urlParams.get('code');
+    document.getElementById('state').innerText = urlParams.get('state');
+  </script>
+</body>
+</html>
